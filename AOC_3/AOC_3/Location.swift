@@ -20,6 +20,22 @@ struct Location: Hashable {
     var hashValue: Int {
         return (31 &* x.hashValue) &+ y.hashValue
     }
+    
+    mutating func move(c: Character) {
+        switch c {
+        case "<":
+            x -= 1
+        case ">":
+            x += 1
+        case "^":
+            y += 1
+        case "v":
+            y -= 1
+            
+        default:
+            preconditionFailure()
+        }
+    }
 }
 
 func ==(lhs: Location, rhs: Location) -> Bool {
