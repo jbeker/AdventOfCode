@@ -8,5 +8,17 @@
 
 import Foundation
 
-print("Hello, World!")
+guard Process.arguments.count == 2 else { preconditionFailure() }
+guard let content = try? String(contentsOfFile: Process.arguments[1], encoding: NSASCIIStringEncoding) else { preconditionFailure() }
+
+
+let santa = SantaLocation()
+
+for (count,character) in content.characters.enumerate() {
+    santa.move(character)
+    if santa.floor == -1 {
+        print("First time basement floor: \(count+1)")
+        break
+    }
+}
 
