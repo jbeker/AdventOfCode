@@ -2,9 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:AOC_1/AOC_1.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:AOC_2/AOC_2.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:AOC_1/AOC_1.xcodeproj">
+      location = "group:AOC_3/AOC_3.xcodeproj">
    </FileRef>
 </Workspace>
